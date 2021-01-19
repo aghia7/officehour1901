@@ -1,0 +1,4 @@
+Mike, Tyson 3,7
+Zinedine, Zidane 4,0
+Roberto, Carlos 3,99
+Bake, Myrkynbayev 2,12

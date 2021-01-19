@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         StudentsGroup group = new StudentsGroup("SE-20012");
 
-        File file = new File("C:\\Users\\aghia\\OneDrive\\Рабочий стол\\input.txt");
+        File file = new File("C:\\Users\\aghia\\IdeaProjects\\test\\OfficeHourProject\\src\\com\\company\\input.txt");
 
         Scanner sc = new Scanner(file);
 
