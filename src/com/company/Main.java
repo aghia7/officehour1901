@@ -1,13 +1,26 @@
 package com.company;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         StudentsGroup group = new StudentsGroup("SE-20012");
 
-        group.addStudent(new Student("Mike", "Tyson", 3.7));
-        group.addStudent(new Student("Zinedine", "Zidane", 4.0));
-        group.addStudent(new Student("Bake", "Myrkynbayev",2.2));
+        File file = new File("C:\\Users\\aghia\\OneDrive\\Рабочий стол\\input.txt");
+
+        Scanner sc = new Scanner(file);
+
+        while (sc.hasNextLine()) {
+            String name = sc.next();
+            name = name.substring(0, name.length() - 1);
+            String surname = sc.next();
+            double gpa = sc.nextDouble();
+            Student s = new Student(name, surname, gpa);
+            group.addStudent(s);
+        }
 
         System.out.println(group);
     }

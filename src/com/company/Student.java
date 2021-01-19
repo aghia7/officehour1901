@@ -22,7 +22,7 @@ public class Student extends Person {
 
     @Override
     public String toString() {
-        return "Student{" + getName() + " " + getSurname() + ", " +
+        return "Student{" + getId() + ": " + getName() + " " + getSurname() + ", " +
                 "gpa=" + gpa +
                 '}';
     }

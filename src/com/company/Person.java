@@ -1,12 +1,19 @@
 package com.company;
 
 public class Person {
+    private int id;
+    private static int idGen;
     private String name;
     private String surname;
 
     public Person(String name, String surname) {
+        id = ++idGen;
         setName(name);
         setSurname(surname);
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getName() {
@@ -27,7 +34,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "Person{" + id + " : " +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 '}';
